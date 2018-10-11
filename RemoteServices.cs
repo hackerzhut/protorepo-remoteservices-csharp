@@ -23,24 +23,24 @@ namespace Remoteservices {
     static RemoteServicesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVyZW1vdGVfc2VydmljZXMucHJvdG8SDnJlbW90ZXNlcnZpY2VzIk0KB1Jl",
+            "ChVyZW1vdGVfc2VydmljZXMucHJvdG8SDnJlbW90ZXNlcnZpY2VzImAKB1Jl",
             "cXVlc3QSDQoFYnJhbmQYASABKAkSDwoHY2hhbm5lbBgCIAEoCRIVCg1hdXRo",
-            "b3JpemF0aW9uGAMgASgJEgsKA3ZpbhgEIAEoCSJcCghSZXNwb25zZRImCgZy",
-            "ZXN1bHQYASABKAsyFi5yZW1vdGVzZXJ2aWNlcy5SZXN1bHQSKAoHY29tbWFu",
-            "ZBgCIAEoCzIXLnJlbW90ZXNlcnZpY2VzLkNvbW1hbmQiKwoGUmVzdWx0EgwK",
-            "BGNvZGUYASABKAMSEwoLZGVzY3JpcHRpb24YAiABKAkiYgoHQ29tbWFuZBIS",
-            "Cgppc3N1ZWRUaW1lGAEgASgDEhEKCXN0YXJ0VGltZRgCIAEoAxIOCgZzdGF0",
-            "dXMYAyABKAkSDgoGYWN0aW9uGAQgASgJEhAKCHByb2dyZXNzGAUgASgJIiYK",
-            "BUVycm9yEgwKBGNvZGUYASABKAkSDwoHbWVzc2FnZRgCIAEoCTKcAQoOUmVt",
-            "b3RlU2VydmljZXMSQAoJR2V0U3RhdHVzEhcucmVtb3Rlc2VydmljZXMuUmVx",
-            "dWVzdBoYLnJlbW90ZXNlcnZpY2VzLlJlc3BvbnNlIgASSAoPR2V0U3RhdHVz",
-            "U3RyZWFtEhcucmVtb3Rlc2VydmljZXMuUmVxdWVzdBoYLnJlbW90ZXNlcnZp",
-            "Y2VzLlJlc3BvbnNlIgAwAUIiCh5jb20udG95b3RhLnJlbW90ZXNlcnZpY2Vz",
-            "LmdycGNQAWIGcHJvdG8z"));
+            "b3JpemF0aW9uGAMgASgJEgsKA3ZpbhgEIAEoCRIRCglyZXF1ZXN0SWQYBSAB",
+            "KAkiXAoIUmVzcG9uc2USJgoGcmVzdWx0GAEgASgLMhYucmVtb3Rlc2Vydmlj",
+            "ZXMuUmVzdWx0EigKB2NvbW1hbmQYAiABKAsyFy5yZW1vdGVzZXJ2aWNlcy5D",
+            "b21tYW5kIisKBlJlc3VsdBIMCgRjb2RlGAEgASgDEhMKC2Rlc2NyaXB0aW9u",
+            "GAIgASgJImIKB0NvbW1hbmQSEgoKaXNzdWVkVGltZRgBIAEoAxIRCglzdGFy",
+            "dFRpbWUYAiABKAMSDgoGc3RhdHVzGAMgASgJEg4KBmFjdGlvbhgEIAEoCRIQ",
+            "Cghwcm9ncmVzcxgFIAEoCSImCgVFcnJvchIMCgRjb2RlGAEgASgJEg8KB21l",
+            "c3NhZ2UYAiABKAkynAEKDlJlbW90ZVNlcnZpY2VzEkAKCUdldFN0YXR1cxIX",
+            "LnJlbW90ZXNlcnZpY2VzLlJlcXVlc3QaGC5yZW1vdGVzZXJ2aWNlcy5SZXNw",
+            "b25zZSIAEkgKD0dldFN0YXR1c1N0cmVhbRIXLnJlbW90ZXNlcnZpY2VzLlJl",
+            "cXVlc3QaGC5yZW1vdGVzZXJ2aWNlcy5SZXNwb25zZSIAMAFCIgoeY29tLnRv",
+            "eW90YS5yZW1vdGVzZXJ2aWNlcy5ncnBjUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Remoteservices.Request), global::Remoteservices.Request.Parser, new[]{ "Brand", "Channel", "Authorization", "Vin" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Remoteservices.Request), global::Remoteservices.Request.Parser, new[]{ "Brand", "Channel", "Authorization", "Vin", "RequestId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Remoteservices.Response), global::Remoteservices.Response.Parser, new[]{ "Result", "Command" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Remoteservices.Result), global::Remoteservices.Result.Parser, new[]{ "Code", "Description" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Remoteservices.Command), global::Remoteservices.Command.Parser, new[]{ "IssuedTime", "StartTime", "Status", "Action", "Progress" }, null, null, null),
@@ -78,6 +78,7 @@ namespace Remoteservices {
       channel_ = other.channel_;
       authorization_ = other.authorization_;
       vin_ = other.vin_;
+      requestId_ = other.requestId_;
     }
 
     public Request Clone() {
@@ -124,6 +125,16 @@ namespace Remoteservices {
       }
     }
 
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 5;
+    private string requestId_ = "";
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     public override bool Equals(object other) {
       return Equals(other as Request);
     }
@@ -139,6 +150,7 @@ namespace Remoteservices {
       if (Channel != other.Channel) return false;
       if (Authorization != other.Authorization) return false;
       if (Vin != other.Vin) return false;
+      if (RequestId != other.RequestId) return false;
       return true;
     }
 
@@ -148,6 +160,7 @@ namespace Remoteservices {
       if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       if (Authorization.Length != 0) hash ^= Authorization.GetHashCode();
       if (Vin.Length != 0) hash ^= Vin.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       return hash;
     }
 
@@ -172,6 +185,10 @@ namespace Remoteservices {
         output.WriteRawTag(34);
         output.WriteString(Vin);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
     }
 
     public int CalculateSize() {
@@ -187,6 +204,9 @@ namespace Remoteservices {
       }
       if (Vin.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Vin);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       return size;
     }
@@ -206,6 +226,9 @@ namespace Remoteservices {
       }
       if (other.Vin.Length != 0) {
         Vin = other.Vin;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
     }
 
@@ -230,6 +253,10 @@ namespace Remoteservices {
           }
           case 34: {
             Vin = input.ReadString();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
             break;
           }
         }
